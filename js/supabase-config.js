@@ -1,5 +1,3 @@
-
-// ضع بيانات Supabase الخاصة بك هنا بعد إنشاء المشروع وتشغيل database/supabase_schema.sql
-window.SUPABASE_URL = '';
-window.SUPABASE_ANON_KEY = '';
-// في النسخة الحالية يعمل النظام Demo Mode عبر LocalStorage. عند إضافة المفاتيح سيتم استخدام Supabase Client.
+// ضع بيانات مشروع Supabase هنا
+const SUPABASE_URL = 'https://YOUR-PROJECT.supabase.co';
+const SUPABASE_ANON_KEY = 'YOUR-ANON-KEY';
