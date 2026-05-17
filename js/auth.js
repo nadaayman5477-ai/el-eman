@@ -1,0 +1,5 @@
+const roles={owner:'صاحب الشركة',general_manager:'مدير الشركة',sales_manager:'مدير المبيعات',sales_employee:'موظف مبيعات',accounts_manager:'مدير الحسابات',accounts_employee:'موظف حسابات',warehouse_manager:'مدير المخازن',warehouse_keeper:'أمين مخزن',delivery_manager:'مدير المناديب',delivery_employee:'مندوب توصيل'};
+function renderDemo(){const box=document.getElementById('demoUsers'); box.innerHTML=SEED_DATA.employees.map(e=>`<button type="button" onclick="pick('${e.username}')"><b>${e.name}</b><span>${e.username}</span></button>`).join('')}
+function pick(u){document.getElementById('username').value=u;document.getElementById('password').value='123456'}
+document.getElementById('loginForm').addEventListener('submit',e=>{e.preventDefault(); const u=username.value.trim(); const emp=SEED_DATA.employees.find(x=>x.username===u)||SEED_DATA.employees[0]; localStorage.setItem('aleman_user',JSON.stringify(emp)); location.href='dashboard.html'});
+renderDemo();
